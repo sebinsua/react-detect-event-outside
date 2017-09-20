@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class ClickOutside extends Component {
+class EventOutside extends Component {
   static propTypes = {
     onClickOutside: PropTypes.func.isRequired
   }
@@ -34,4 +34,4 @@ class ClickOutside extends Component {
   }
 }
 
-export default ClickOutside
+export default EventOutside
