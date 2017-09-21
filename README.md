@@ -13,22 +13,20 @@ import EventOutside from 'react-event-outside'
 
 const onEvent = (evt, el) => console.log('event happened outside', evt, el)
 
-const SomeComponent() {
-  return (
-    <div className="SomeComponent">
-      <EventOutside onEventOutside={onEvent}>
-        <div className="SomeComponent-inside">
-          <h2>Inside</h2>
-          <input type="text" />
-        </div>
-      </EventOutside>
-      <div className="SomeComponent-outside">
-        <h2>Outside</h2>
+const SomeComponent = () => (
+  <div className="SomeComponent">
+    <EventOutside onEventOutside={onEvent}>
+      <div className="SomeComponent-inside">
+        <h2>Inside</h2>
         <input type="text" />
       </div>
+    </EventOutside>
+    <div className="SomeComponent-outside">
+      <h2>Outside</h2>
+      <input type="text" />
     </div>
-  )
-}
+  </div>
+)
 
 export default SomeComponent
 ```
