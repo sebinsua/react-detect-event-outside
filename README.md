@@ -7,7 +7,7 @@ A component which detects `click`, `focus` and `touch` events outside from it an
 
 ## Example
 
-### Using the `EventOutside` Component
+### Using the `EventOutside` component
 
 ```js
 import React from 'react'
