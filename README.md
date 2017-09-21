@@ -1,15 +1,40 @@
 # `react-event-outside`
 > `EventOutside` component for React.
 
-### Approach
+A component which detects events outside to it and calls a function to handle the event.
 
-- Create an example project using `create-react-app` first.
-- See: https://github.com/tj/react-click-outside/blob/master/index.js#L24-L30 
-- Normally: `document.addEventListener('focusin', (evt) => console.log('focusing into', evt.target))`
-- Create a simple API based on this, then...
-- Build with the style of [`downshift`](https://github.com/kentcdodds/react-toggled/blob/master/src/index.js).
-- Write-up what events do not bubble. See: https://en.wikipedia.org/wiki/DOM_events#Events (Context here: https://stackoverflow.com/a/5575576)
-- Write a line of code to detect Firefox versions below 52 (well, actually perhaps use this: https://stackoverflow.com/questions/7337670/how-to-detect-focusin-support) and then...
-- To support Firefox 45: `document.addEventListener('focus', (evt) => setImmediate(() => console.log('focusing into', document.activeElement)))`
-- See: https://bugzilla.mozilla.org/show_bug.cgi?id=687787
-- Should be able to announce here: https://github.com/tj/react-click-outside/issues/5
+> **NOTE**: We capture events at the `document` level and wish to support some events which [do not bubble](https://en.wikipedia.org/wiki/DOM_events#Events), for example to detect when elements outside a component have gained `focus`. In these situations we: (a) use the [`useCapture` argument of `addEventListener`](https://stackoverflow.com/questions/7398290/unable-to-understand-usecapture-attribute-in-addeventlistener), or (b) find a similar event which does bubble ([sometimes difficult](https://bugzilla.mozilla.org/show_bug.cgi?id=687787)).
+
+## Example
+
+```js
+import React from 'react'
+import EventOutside from 'react-event-outside'
+
+const onEvent = (evt, el) => console.log('event happened outside', evt, el)
+
+const SomeComponent() {
+  return (
+    <div className="SomeComponent">
+      <EventOutside onEventOutside={onEvent}>
+        <div className="SomeComponent-inside">
+          <h2>Inside</h2>
+          <input type="text" />
+        </div>
+      </EventOutside>
+      <div className="SomeComponent-outside">
+        <h2>Outside</h2>
+        <input type="text" />
+      </div>
+    </div>
+  )
+}
+
+export default SomeComponent
+```
+
+## Install
+
+```sh
+yarn add react-event-outside
+```
