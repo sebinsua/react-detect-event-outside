@@ -2,6 +2,7 @@
   "name": "react-detect-event-outside",
   "version": "0.3.0",
   "main": "dist/index.js",
+  "typings": "./index.d.ts",
   "repository": "git@github.com:sebinsua/react-detect-event-outside.git",
   "author": "Seb Insua <me@sebinsua.com>",
   "license": "MIT",
