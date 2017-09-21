@@ -1,8 +1,8 @@
 {
-  "name": "react-event-outside",
-  "version": "0.0.1",
+  "name": "react-detect-event-outside",
+  "version": "0.1.0",
   "main": "dist/index.js",
-  "repository": "git@github.com:sebinsua/react-event-outside.git",
+  "repository": "git@github.com:sebinsua/react-detect-event-outside.git",
   "author": "Seb Insua <me@sebinsua.com>",
   "license": "MIT",
   "private": false,

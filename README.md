@@ -1,4 +1,4 @@
-# `react-event-outside`
+# `react-detect-event-outside`
 > `EventOutside` component for React.
 
 A component which detects events outside to it and calls a function to handle the event.
@@ -9,7 +9,7 @@ A component which detects events outside to it and calls a function to handle th
 
 ```js
 import React from 'react'
-import EventOutside from 'react-event-outside'
+import EventOutside from 'react-detect-event-outside'
 
 const onEvent = (evt, el) => console.log('event happened outside', evt, el)
 
@@ -34,5 +34,5 @@ export default SomeComponent
 ## Install
 
 ```sh
-yarn add react-event-outside
+yarn add react-detect-event-outside
 ```
