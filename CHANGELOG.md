@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/sebinsua/react-detect-event-outside/compare/v0.3.0...v0.6.0) (2017-09-24)
+
+
+### Bug Fixes
+
+* hoist non-react statics; component display name ([0fa4fcc](https://github.com/sebinsua/react-detect-event-outside/commit/0fa4fcc))
+
+
+### Features
+
+* early version of typescript typings ([6bb343a](https://github.com/sebinsua/react-detect-event-outside/commit/6bb343a))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/sebinsua/react-detect-event-outside/compare/v0.3.0...v0.5.0) (2017-09-21)
 
