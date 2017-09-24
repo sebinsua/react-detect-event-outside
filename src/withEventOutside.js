@@ -1,6 +1,8 @@
 // @flow
 
 import React, { Component } from 'react'
+import hoistNonReactStatics from 'hoist-non-react-statics'
+import wrapDisplayName from './wrapDisplayName'
 import debounce from 'debounce'
 
 import type { Node, ComponentType } from 'react'
@@ -83,6 +85,13 @@ const withEventOutside = (
           )}
         </div>
       )
+    }
+  }
+
+  if (Target) {
+    EventOutside = hoistNonReactStatics(EventOutside, Target)
+    if (process.env.NODE_ENV !== 'production') {
+      EventOutside.displayName = wrapDisplayName(Target, 'withEventOutside')
     }
   }
 
